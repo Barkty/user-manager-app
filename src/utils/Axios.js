@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 import axios from 'axios';
 
-const { REACT_API_URL } = process.env
+const { REACT_APP_API_URL } = process.env
 
 const API = axios.create({
-    baseURL: REACT_API_URL,
+    baseURL: REACT_APP_API_URL,
     withCredentials: true,
     headers: {
       'Content-Type': 'application/json',

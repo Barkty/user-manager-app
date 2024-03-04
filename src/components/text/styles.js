@@ -6,9 +6,9 @@ export const InputContainer = styled.div`
   align-items: flex-start;
   padding: 0px;
   width: 100%;
-  max-width: ${(props) => (props.maxWidth ? props.maxWidth : '100%')};
+  max-width: '100%';
   height: 48px;
-  margin: 2rem 0 1.2rem 0;
+  margin: 1.5rem 0 0.6rem 0;
 
   @media screen and (max-width: 768px) {
     height: 66.37px;

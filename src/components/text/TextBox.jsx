@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { ErrorMessage, InputContainer, InputField, InputLabel, InputWrap, OTPGroup } from './styles';
+import { ErrorMessage, InputContainer, InputField, InputLabel, InputWrap } from './styles';
 import PropTypes from 'prop-types';
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
 
 export const TextBox = ({
   label,
-  inputType,
+  type,
   inputPlaceholder,
   error,
   value,
@@ -17,7 +17,7 @@ export const TextBox = ({
   maxWidth,
   touched,
 }) => {
-  const [pin, setPin] = useState(inputType);
+  const [pin, setPin] = useState(type);
   const handleChange = () => {
     pin === 'password' ? setPin('text') : setPin('password');
   };
@@ -34,9 +34,8 @@ export const TextBox = ({
           onBlur={onBlur}
           name={name}
           color={color}
-          inputType={inputType}
         />
-        {inputType === 'password' && (
+        {type === 'password' && (
           <span onClick={handleChange} className="absolute right-5 -translate-y-[50%] top-[50%]">
             {pin === 'password' ? (
               <BsEye color="#8b8b8b" className="eye" />

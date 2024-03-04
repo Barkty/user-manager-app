@@ -1,10 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-export const PrimaryButton = ({ label, onClick }) => {
+export const PrimaryButton = ({ children, type, disabled }) => {
   return (
-    <button type="button" className="btn btn-[#250126] px-8 text-sm md:text-base normal-case" onClick={onClick}>
-      {label}
+    <button
+      disabled={disabled}
+      type={type}
+      className="w-full h-[60px] rounded-md bg-[#250126] px-8 text-sm font-normal text-white md:text-base normal-case font-grotesk"
+    >
+      {children}
     </button>
   );
 };
